@@ -10,8 +10,8 @@ const Intro = () => {
                     <p>Here</p>
                     <div className="buttons_intro">
                         <button className='default_button'>Latest Jobs </button>
-                        <button className='default_button'>Original formats</button>
-                        <button className='default_button'>Business with me </button>
+                        <button className='default_button'>Formats </button>
+                        <button className='default_button'>With me </button>
                     </div>
                 </div>
             </div>
