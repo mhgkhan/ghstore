@@ -1,16 +1,29 @@
+"use client"
+
 import Image from 'next/image';
-import React from 'react'
-import { TbLayoutSidebarLeftExpandFilled } from "react-icons/tb";
-import { TbLayoutSidebarLeftCollapseFilled } from "react-icons/tb";
+import React, { useState } from 'react'
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
+
+
 import Navbar from './Navbar';
 
 const Header = () => {
+
+    const [open,setOpen] = useState(false)
+    const click = ()=>{
+        setOpen(!open)
+    }
+
+
     return (
         <header>
             <div className="container">
-                <div className="logo"><Image src={'/logo.jpg'} width={40} height={50} alt='Gh Store Logo' /></div>
-                <div className="sidebarButton"><TbLayoutSidebarLeftCollapseFilled /></div>
-                <Navbar />
+                <div className="logo_w_btn">
+                    <div className="logo"><Image src={'/logo.png'} width={60} height={60} alt='Gh Store Logo' /></div>
+                    <div className="sidebarButton" onClick={click}>{open?<IoClose />:<RxHamburgerMenu />}</div>
+                </div>
+                <Navbar click={click} open={open} />
             </div>
         </header>
     )

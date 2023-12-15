@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({open}) => {
     return (
-        <nav>
+        <nav style={{height:open?"0px":"auto"}}>
             <ul>
                 <li><Link href="/jobs">JOBS</Link></li>
                 <li><Link href="/advertaisment">ADVERTAISMENT</Link></li>
