@@ -155,14 +155,103 @@ header .container nav ul li a:hover {
 }
 
 
+
+
+
+
+
+/* jobs page styling ... */
+.filter-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem auto;
+    gap: 10px;
+}
+
+.filter-container .filter-block {
+    width: 30%;
+    margin: 0px auto;
+}
+
+.filter-block select {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filter-block select option {
+    font-weight: normal;
+    font-size: 17px;
+}
+
+.all-jobs-block {
+    border: 3px dotted #f9a435;
+    width: 100%;
+}
+
+.all-jobs-block h3 {
+    margin: 1rem;
+}
+
+.job {
+    width: 100%;
+    /* border: 1px solid purple; */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.job:first-child {
+    border: 2px dotted purple;
+    font-weight: bolder;
+}
+
+.job:last-child {
+    border-bottom: none;
+}
+
+.job-item {
+    margin: .7rem auto;
+    border-bottom: 2px dotted #f9a435;
+}
+
+.job .sno,
+.job .action {
+    width: 15%;
+    /* border: 1px solid red; */
+}
+
+.job .action {
+    width: auto !important;
+}
+
+.job .desc {
+    width: auto;
+    text-align: center;
+    /* border: 1px solid red; */
+    max-width: 65%;
+}
+
+
 footer {
     background: #3e3639;
     color: white;
 }
+
 footer .container {
     padding: 20px;
 }
-footer .container p{
+
+footer .container p {
     font-weight: 300;
 }
 
@@ -224,7 +313,29 @@ footer .container p{
         padding: 4px 0px;
         display: block;
     }
-    .intro .buttons_intro{
+
+    .intro .buttons_intro {
         justify-content: flex-start !important;
+    }
+
+    #jobsheader {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .filter-container {
+        flex-wrap: wrap !important;
+    }
+
+    .filter-block {
+        width: 140px !important;
+    }
+}
+
+@media screen and (max-width:310px) {
+
+    .filter-block {
+        width: 100% !important;
     }
 }
