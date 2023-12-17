@@ -242,6 +242,39 @@ header .container nav ul li a:hover {
 }
 
 
+
+.jobpage h1 {
+    color: #8b560f;
+    margin: 3rem auto;
+}
+
+.jobpage dl {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.jobpage dl dt {
+    font-size: 1.3rem;
+    color: #f9a435;
+    margin: .7rem 0px;
+    list-style: '🏢';
+}
+
+
+.jobpagedesc{
+    margin: 1rem 0px;
+}
+.jobpage p{text-align: justify;}
+
+.jobpage button{
+    margin: .5rem;
+}
+
+
+
 footer {
     background: #3e3639;
     color: white;
