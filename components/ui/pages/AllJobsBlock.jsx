@@ -1,11 +1,19 @@
+
 import React from 'react'
 import JobItem from './JobItem'
 import JobJson from '@/other/Jobs.json'
 
 
-const AllJobsBlock = () => {
 
+const fetchJobs = async ()=>{
+    const reqwithres = await (await fetch("https://zobjobs.com/api/jobs")).json();
+    return reqwithres
+}
 
+const AllJobsBlock = async () => {
+
+    const jobs =  await fetchJobs();
+    // console.log(jobs['jobs'])
     
 
     return (
@@ -20,8 +28,8 @@ const AllJobsBlock = () => {
             </div>
 
 
-           {JobJson.map((job,index)=>{
-            return <JobItem serial={index+1} key={index} desc={job.desc} />
+           {jobs && jobs['jobs'].map((job,index)=>{
+            return <JobItem serial={index+1} desc={job.description} slug={job.slug} title={job.title} companyurl={job.url} category={{...job.category}} country={job.country}  link={job.link} location={job.location} stard={job.created} expre={job.expires} code={job.unique} key={job.unique} />
            })}
 
 

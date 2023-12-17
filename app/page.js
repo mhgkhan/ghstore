@@ -1,10 +1,12 @@
 import Intro from "@/components/ui/pages/Intro";
 
 
-export default function Home() {
+
+export default async function Home() {
+
   return (
-   <main>
+    <main>
       <Intro />
-   </main>
+    </main>
   )
 }
