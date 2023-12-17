@@ -8,7 +8,7 @@ const JobItem = ({ serial,code,title, desc, slug,category }) => {
         <div className="job job-item">
             <p className='sno'>{serial}</p>
             <p className='desc'>{title}</p>
-            <Link href="/jobs/jobid"><button className='default_button action' >Open</button></Link>
+            <Link href={`/jobs/${title.split(" ").join("-")}`}><button className='default_button action' >Open</button></Link>
         </div>
     )
 }

@@ -4,7 +4,7 @@ const page = ({ params }) => {
     return (
         <main>
             <div className="container">
-                <h1>hello job page {params.jobslug}</h1>
+                <h1>hello job title : <br /> {params.jobslug}</h1>
             </div>
         </main>
     )
